@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Scheduler</title>
+
+	<!-- JQ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+	<!-- Moment.js -->
+	<script src="moment.js"></script>
+
+	<!-- Logic file -->
+	<script src="train-scheduler-logic.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!-- TABLE -->
+
+
+<div class="container" id="macrocontainer">
+
+  <div class="row">
+    <div class="col" id="BSrow1of3">
+		<div class="jumbotron bg-success">
+		  <h1 class="display-3 font-weight-bold text-light">TRAIN SCHEDULER</h1>
+		</div>
+    </div>
+  </div>
+
+  <div class="row" id="BSrow2of3">
+    <div class="col">
+
+		<div class="card">
+		  <div class="card-header bg-primary">
+		    CURRENT TRAIN SCHEDULE
+		  </div>
+		  <div class="card-body">
+
+			<table class="table table-hover table-inverse bg-success" id="currentTrainSchedule">
+			  <thead>
+			    <tr>
+			      <th>Train Name</th>
+			      <th>Destination</th>
+			      <th>Frequency (min)</th>
+			      <th>Next Arrival</th>
+			      <th>Minutes Away</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Rajdhani Express</td>
+			      <td>New Delhi</td>
+			      <td>24</td>
+			      <td>((time))</td>
+			      <td>((unknown))</td>
+			    </tr>
+
+			  </tbody>
+			</table>
+
+		  </div>
+		</div>
+    </div>
+  </div>
+
+    <div class="row" id="BSrow3of3">
+    <div class="col">
+		<div class="card">
+		  <div class="card-header bg-primary">
+		    ADD TRAIN
+		  </div>
+		  <div class="card-body">
+
+			<label for="trainName">Train Name</label>
+			
+			<div class="input-group">
+				<input type="text" class="form-control" id="TrainName">
+			</div>
+			<br>
+
+			<label for="trainName">Destination</label>
+
+			<div class="input-group">
+				<input type="text" class="form-control" id="Destination">
+			</div>
+			<br>
+
+			<label for="trainName">First Train Time</label>
+
+			<div class="input-group">
+				<input type="text" class="form-control" id="FirstTrainTime">
+			</div>
+			<br>						
+
+			<label for="trainName">Frequency</label>
+
+			<div class="input-group">
+				<input type="text" class="form-control" id="Frequency">
+			</div>
+			<br>
+
+			<button id="submit" type="button" class="btn btn-warning">SUBMIT</button>
+
+		  </div>
+		</div>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
