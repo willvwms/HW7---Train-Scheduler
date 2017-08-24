@@ -29,7 +29,7 @@ $(document).on("ready", function (){
 
       console.log(trainName);
       console.log(destination);
-      console.log(firstTrainTime);
+      console.log("firstTrainTime: " + moment(firstTrainTime, "a"));
       console.log(frequency);
 
     // Add it to Firebase
@@ -92,8 +92,6 @@ $(document).on("ready", function (){
       $("#currentTrainSchedule > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
 
     }); // close ON CHILD ADDED handler
-
-
 
 }); // end of ON-READY function
 
