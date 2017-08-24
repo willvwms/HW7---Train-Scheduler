@@ -64,18 +64,19 @@ $(document).on("ready", function (){
       console.log("from firebase:" + snap.val().frequency);  
 
       // Store the essential (user input) properties in new variables:
-      let trainName = snap.val().name;
+      let trainName = snap.val().trainName;
       let destination = snap.val().destination;
-      let firstTrainTime = snap.val().frequency;
-      let frequency = snap.val().firstTrain;
+      let firstTrainTime = snap.val().firstTrainTime;
+      let frequency = snap.val().frequency;
 
       // Calculate # of MINUTES till arrival: difference = ( current time ) - ( firstTrainTime )
       // use moment.diff(variable, "minutes")
       let difference = moment().diff(moment.unix(firstTrainTime, "minutes"));
-      console.log(difference);   
+      console.log("difference = " + difference);   
 
       // Find the remainder (%) after dividing DIFFERENCE by FREQUENCY:
       let remainder = parseInt(difference) % frequency;
+      console.log("remainder = " + remainder);
 
       // Find difference of frequency and the remainder;
       // this will equal MINUTES AWAY:
@@ -88,8 +89,7 @@ $(document).on("ready", function (){
       console.log("next arrival = " + nextArrival);
 
       // Append newTrain's data to the table
-      $("#currentTrainSchedule > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" +
-      firstTrainTime + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
+      $("#currentTrainSchedule > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
 
     }); // close ON CHILD ADDED handler
 
