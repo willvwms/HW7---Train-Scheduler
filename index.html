@@ -12,24 +12,21 @@
 	<!-- Moment.js -->
 	<script src="moment.js"></script>
 
-	<!-- Logic file -->
-	<script src="train-scheduler-logic.js"></script>
-
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
+	<script src="train-scheduler-logic.js"></script>
+
+
 </head>
 <body>
-
-<!-- TABLE -->
-
 
 <div class="container" id="macrocontainer">
 
   <div class="row">
     <div class="col" id="BSrow1of3">
 		<div class="jumbotron bg-success">
-		  <h1 class="display-3 font-weight-bold text-light">TRAIN SCHEDULER</h1>
+		  <h1 class="display-3 font-weight-bold text-light" style="text-align: center;">TRAIN SCHEDULER</h1>
 		</div>
     </div>
   </div>
@@ -38,7 +35,7 @@
     <div class="col">
 
 		<div class="card">
-		  <div class="card-header bg-primary">
+		  <div class="card-header bg-primary font-weight-bold text-light">
 		    CURRENT TRAIN SCHEDULE
 		  </div>
 		  <div class="card-body">
@@ -54,14 +51,6 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <td>Rajdhani Express</td>
-			      <td>New Delhi</td>
-			      <td>24</td>
-			      <td>((time))</td>
-			      <td>((unknown))</td>
-			    </tr>
-
 			  </tbody>
 			</table>
 
@@ -73,40 +62,40 @@
     <div class="row" id="BSrow3of3">
     <div class="col">
 		<div class="card">
-		  <div class="card-header bg-primary">
+		  <div class="card-header bg-primary font-weight-bold text-light">
 		    ADD TRAIN
 		  </div>
-		  <div class="card-body">
+		  <div class="card-body bg-success">
 
-			<label for="trainName">Train Name</label>
+		  	<form>
 			
-			<div class="input-group">
-				<input type="text" class="form-control" id="TrainName">
+			<div class="form-group">
+				<label for="trainName" class="font-weight-bold text-light">Train Name</label>
+				<input type="text" class="form-control" id="trainName">
 			</div>
 			<br>
 
-			<label for="trainName">Destination</label>
-
-			<div class="input-group">
-				<input type="text" class="form-control" id="Destination">
+			<div class="form-group">
+				<label for="destination" class="font-weight-bold text-light">Destination</label>
+				<input type="text" class="form-control" id="destination">
 			</div>
 			<br>
 
-			<label for="trainName">First Train Time</label>
-
-			<div class="input-group">
-				<input type="text" class="form-control" id="FirstTrainTime">
+			<div class="form-group">
+				<label for="firstTrainTime" class="font-weight-bold text-light">First Train Time (Use 24:00 Military Time)</label>
+				<input type="text" class="form-control" id="firstTrainTime">
 			</div>
 			<br>						
 
-			<label for="trainName">Frequency</label>
-
-			<div class="input-group">
-				<input type="text" class="form-control" id="Frequency">
+			<div class="form-group">
+				<label for="frequency" class="font-weight-bold text-light">Frequency</label>
+				<input type="text" class="form-control" id="frequency">
 			</div>
 			<br>
 
-			<button id="submit" type="button" class="btn btn-warning">SUBMIT</button>
+			<button id="add-train" type="submit" class="btn btn-warning font-weight-bold text-dark">SUBMIT</button>
+
+			</form>
 
 		  </div>
 		</div>
@@ -117,9 +106,9 @@
 
 </div>
 
+<style type="text/css">	#BSrow3of3 {padding-top: 20px;} #BSrow1of3 {padding-top: 20px;}</style>
 
-
-
+<!-- Logic file -->
 
 </body>
 </html>
